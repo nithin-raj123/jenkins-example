@@ -1,6 +1,6 @@
 node{
     stage('SCM Checkout'){
-           'https://github.com/nithin-raj123/jenkins-example'
+          git 'https://github.com/nithin-raj123/jenkins-example'
       }
       stage('compile-package'){
       def mvnHome = tool name: 'maven_3_6_3', type: 'maven'
