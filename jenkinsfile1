@@ -1,6 +1,8 @@
 node{
     stage('SCM Checkout'){
-       git 'https://github.com/nithin-raj123/jenkins-example'
+          steps{
+          git branch: 'main', credentialsId: '93f4b542-c2e1-428d-9f74-a38ef0291df3', url: 'https://github.com/nithin-raj123/jenkins-example'
+         }
       }
       stage('compile-package'){
       def mvnHome = tool name: 'maven_3_6_3', type: 'maven'
