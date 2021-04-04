@@ -1,1 +1,10 @@
-
+node{
+    stage('SCM Checkout'){
+       git 'https://github.com/nithin-raj123/jenkins-example'
+      }
+      stage('compile-package'){
+       sh 'mvn package'
+      }
+      
+  }
+       
